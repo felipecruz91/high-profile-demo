@@ -11,7 +11,7 @@ edit-sbom-curl:
 	@sed -i '' 's|8.5.0-r0|8.3.0-r0|g' sbom.spdx.json
 
 build-scratch:
-	docker buildx build -t felipecruz319/high-profile-demo . -f Dockerfile.scratch --load
+	docker buildx build -t felipecruz319/high-profile-demo . -f Dockerfile.sbom --load
 
 scout-cves:
 	docker scout cache prune --sboms --force
