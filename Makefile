@@ -15,4 +15,4 @@ build-scratch:
 
 scout-cves:
 	docker scout cache prune --sboms --force
-	docker scout cves felipecruz319/high-profile-demo --only-cve-id CVE-2023-38545 --org felipecruz319
+	docker scout cves felipecruz319/high-profile-demo --only-cve-id CVE-2023-38545,CVE-2023-44487 --org felipecruz319
