@@ -20,6 +20,7 @@ RUN --mount=type=cache,target=/var/cache/apk \
     apk --update add \
     ca-certificates \
     curl \
+    lighttpd \
     tzdata \
     && \
     update-ca-certificates
