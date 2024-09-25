@@ -17,6 +17,12 @@ edit-sbom-lighttpd:
 build-scratch:
 	docker buildx build -t felipecruz319/high-profile-demo . -f Dockerfile.sbom --load
 
+push-scratch-staging:
+	docker buildx build -t registry-1-stage.docker.io/felipecruz319/high-profile-demo . -f Dockerfile.sbom --platform linux/arm64 --push
+
+push-scratch-prod:
+	docker buildx build -t dockerscoutpolicy/high-profile-demo . -f Dockerfile.sbom --platform linux/arm64 --push
+
 scout-cves:
 	docker scout cache prune --sboms --force
 	docker scout cves felipecruz319/high-profile-demo --only-cve-id CVE-2023-38545,CVE-2023-44487,CVE-2024-3094 --org felipecruz319
