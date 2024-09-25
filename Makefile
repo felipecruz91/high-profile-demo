@@ -10,7 +10,7 @@ gen-sbom:
 edit-sbom-curl:
 	@sed -i '' 's|8.5.0-r0|8.3.0-r0|g' sbom.spdx.json
 
-# Edit SBOM to lower lighttpd package version below 8.4.0-r0 to be vulnerable to CVE-2023-38545
+# Edit SBOM to lower lighttpd package version below 8.4.0-r0 to be vulnerable to CVE-2024-3094
 edit-sbom-lighttpd:
 	@sed -i '' 's|1.4.76-r0|1.4.75-r0|g' sbom.spdx.json
 
